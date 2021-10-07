@@ -2,19 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Menu</title>
+	<title>Print</title>
 	<style type="text/css">
 	body{
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 20px;
 		margin:0 auto;
-		background-image: url("https://is20-2019.susu.ru/wp-content/uploads/2021/02/python-logo-4k-i6-scaled.jpg");
+		background-image: url("https://images.wallpaperscraft.ru/image/treugolniki_uzory_tekstura_127001_3840x2160.jpg");
 		background-repeat:no-repeat;
 		background-attachment:fixed;
 		background-color: black;
 		background-size: cover;
 	}
-	.text{
+		.text{
 		background-color: rgba(255, 255, 255, 0.3);
 		padding-right: 10px;
 		padding-left: 10px;
@@ -24,6 +24,7 @@
 		margin-left: 30px;
 		margin-bottom: 0px;
 		line-height: 40px;
+		color: white;
 	}
 	#myBtn {
   display: none;
@@ -40,37 +41,60 @@
   padding: 15px;
   border-radius: 4px;
 }
-
 #myBtn:hover {
   background-color: #555;
 }
 a{
-	color: white;
+	color: greenyellow;
 }
-</style>
+.double-border-button {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 30px;
+  position: relative;
+  border: 2px solid #f1c40f;
+  color: #f1c40f;
+  font-family: 'Montserrat', sans-serif;
+  transition: .4s;
+}
+.double-border-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: .4s;
+}
+.double-border-button:hover:after {
+  border-color: #f1c40f;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
+}
+	</style>
 </head>
 <body>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Наверх</button>
-<div style="background-color:black;color:white;padding:30px"><a href="index.html" style="outline: none; color: white;">Pyweb</a></div>
-<div class = text><a href="1.html">1.print</a><br><a href="2.html">2.Переменные</a><br><a href="net.html">3.input</a><br><a href="net.html">4.if, elsif, else</a></div>
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Наверх</button>
+<div style="background-color:black;color:white;padding:30px"><a href=index.html style="outline: none; color: white;">Pyweb</a></div>
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
+	<div class = text>
+		<p>Итак я надеюсь что вы готовы к этому уроку(вам понадобиться <a href="https://www.sublimetext.com/3">редактор</a> и <a href="https://www.python.org/downloads/">язык</a>)</p>
+		<p>В нём мы изучим команду print. Она служит для вывода информации в консоль. Мы можем напечатать текст, поставив его после слова print в кавычки перед круглыми скобками таким образом:</p>
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-</script>
-
+ <pre>
+ <code id="htmlViewer" style="color:rgb(248, 248, 242); font-weight:400;background-color:rgb(43, 43, 43);background:rgb(43, 43, 43);display:block;padding: .5em;"><span style="color:rgb(245, 171, 53); font-weight:400;background:rgba(0, 0, 0, 0);">print</span>(<span style="color:rgb(171, 227, 56); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Hello world!&quot;</span>)
+</code></pre>
+ <p>Я захотел чтобы консоль вывела знаменитое: "Hello world!". Для того, чтобы всё сработало, необходимо открыть созданный вами файл(тот, в который вы запихали этот код).</p>
+ <p>Для вывода чисел нужно всё тоже самое, но без кавычек(а можно и в кавычках).</p>
+ <pre>
+ <code id="htmlViewer" style="color:rgb(248, 248, 242); font-weight:400;background-color:rgb(43, 43, 43);background:rgb(43, 43, 43);display:block;padding: .5em;"><span style="color:rgb(255, 215, 0); font-weight:400;background:rgba(0, 0, 0, 0);">print</span>(<span style="color:rgb(245, 171, 53); font-weight:400;background:rgba(0, 0, 0, 0);">123</span>)
+</code></pre>
+<a href="" class="double-border-button"><span>Некуда идти</span></a><a href="2.html" class="double-border-button"><span>2.Переменные</span></a>
+</div>
 </body>
 </html>
